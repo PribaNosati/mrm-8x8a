@@ -88,7 +88,7 @@ public:
 	/** Add a mrm-8x8a board
 	@param deviceName - device's name
 	*/
-	void add(char * deviceName = "");
+	void add(char * deviceName = (char*)"");
 
 	/** Display stored (in sensor, read-only) bitmap
 	@param bitmapId - bitmap's id

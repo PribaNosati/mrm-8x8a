@@ -42,7 +42,7 @@ void Mrm_8x8a::actionSet(ActionBase* action, uint8_t switchNumber, uint8_t devic
 */
 void Mrm_8x8a::add(char * deviceName)
 {
-	uint16_t canIn, canOut;
+	uint16_t canIn = 0, canOut = 0;
 	switch (nextFree) {
 	case 0:
 		canIn = CAN_ID_8x8A0_IN;
@@ -224,7 +224,7 @@ bool Mrm_8x8a::messageDecode(uint32_t canId, uint8_t data[8]) {
 @return - display changed
 */
 bool Mrm_8x8a::progressBar(uint32_t period, uint32_t current, bool reset) {
-	static uint32_t _period = 0;
+	// static uint32_t _period = 0;
 	static uint32_t lastDisplayMs = 0;
 	static uint8_t lastDot = 0xFF;
 	static bool lastGreen = true;
@@ -235,7 +235,7 @@ bool Mrm_8x8a::progressBar(uint32_t period, uint32_t current, bool reset) {
 	}
 
 	if (reset) {
-		_period = period;
+		// _period = period;
 		lastDisplayMs = 0;
 	}
 
