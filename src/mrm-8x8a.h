@@ -125,9 +125,10 @@ public:
 	/** Read CAN Bus message into local variables
 	@param canId - CAN Bus id
 	@param data - 8 bytes from CAN Bus message.
+	@param length - number of data bytes
 	@return - true if canId for this class
 	*/
-	bool messageDecode(uint32_t canId, uint8_t data[8]);
+	bool messageDecode(uint32_t canId, uint8_t data[8], uint8_t length);
 
 	/** Displays 8-row progress bar. Useful for visual feedback of a long process.
 	@param period - total count (100%)
